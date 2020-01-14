@@ -1,27 +1,25 @@
-import React, { Component, useState } from "react";
+import React, {useState } from "react";
 import { StyleSheet, Text, Button, TextInput, View } from "react-native";
 import { SocialIcon } from "react-native-elements";
 
 const Login = () => {
-  const [value, changeValue] = useState("Loggedout");
   const [btnvalue, btnchangeValue] = useState("Login");
 
   const changeText = () => {
-    changeValue(value == "Loggedout" ? "LoggedIn" : "Loggedout");
     btnchangeValue(btnvalue == "Login" ? "Logout" : "Login");
   };
 
   return (
     <View style={styles.container}>
-      <Text>{value}</Text>
+      <Text>My Mart</Text>
       <TextInput style={{ height: 40 }} placeholder="Username" />
       <TextInput style={{ height: 40 }} placeholder="passowrd" />
       <Button title={btnvalue} onPress={changeText} />
 
       <View style={styles.buttonContainer}>
-        <SocialIcon title="Sign In With Facebook" button type="facebook" />
+        <SocialIcon type="facebook" />
 
-        <SocialIcon title="Sign In With Google" button type="google" />
+        <SocialIcon type="google" />
       </View>
     </View>
   );
@@ -40,10 +38,6 @@ const styles = StyleSheet.create({
   },
   boldText: {
     fontWeight: "bold"
-  },
-
-  buttonContainer: {
-    marginTop: 20
   },
   input: {
     borderWidth: 1,

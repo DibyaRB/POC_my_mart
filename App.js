@@ -1,6 +1,5 @@
 import React , {useState} from 'react';
-import Login from './components/Login.js';
-import HeaderMenu from './components/Common/HeaderMenu.js';
+import Login from './Components/Login.js';
 import {StyleSheet,View} from 'react-native';
 
 export default function App() {
